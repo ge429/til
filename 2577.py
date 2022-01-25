@@ -2,12 +2,13 @@ a = int(input())
 b = int(input())
 c = int(input())
 
-count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-result = a * b * c
-numbers = list(str(result))
+res = a * b * c
+cnt = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-for num in numbers:
-    count[int(num)] += 1
+while res != 0:
+    n = res % 10
+    res //= 10
+    cnt[n] += 1
 
-for c in count:
-    print(c)
+for item in cnt:
+    print(item)
